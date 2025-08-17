@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Asset Verification App - User Manual</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .manual-container {
+            width: 720px;
+            min-height: 960px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #5f6368;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #1a73e8;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title .material-icons {
+            margin-right: 10px;
+            color: #1a73e8;
+        }
+
+        .subsection {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .subsection-title {
+            font-size: 20px;
+            color: #4285f4;
+            margin-bottom: 10px;
+        }
+
+        .subsection-content {
+            margin-left: 20px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+
+        .feature-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .feature-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        .step-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .step-list li {
+            margin-bottom: 10px;
+        }
+
+        .warning {
+            background-color: #fef7e0;
+            border-left: 4px solid #fbbc04;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+
+        .table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f1f3f4;
+            color: #202124;
+        }
+
+        .note {
+            font-style: italic;
+            color: #5f6368;
+            margin: 10px 0;
+        }
+
+        .background-shape {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1), rgba(66, 133, 244, 0.05));
+            z-index: 0;
+        }
+
+        .shape-1 {
+            top: -200px;
+            right: -100px;
+        }
+
+        .shape-2 {
+            bottom: -200px;
+            left: -100px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #5f6368;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="manual-container">
+        <div class="background-shape shape-1"></div>
+        <div class="background-shape shape-2"></div>
+        
+        <div class="header">
+            <h1>Physical Asset Verification App</h1>
+            <p>User Guide</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">info</i>
+                1. Introduction
+            </h2>
+            <p>The <strong>Physical Asset Verification App</strong> is a web-based tool designed for tracking and managing industrial assets. It allows users to:</p>
+            <ul class="feature-list">
+                <li>Record asset details (ID, description, condition, location, etc.)</li>
+                <li>Upload photos of assets</li>
+                <li>Export/import data in Excel format</li>
+                <li>Create and restore backups</li>
+                <li>Customize form fields</li>
+            </ul>
+            <p>This guide explains how to use all features of the app effectively.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">play_arrow</i>
+                2. Getting Started
+            </h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">2.1 Accessing the App</h3>
+                <ul class="step-list">
+                    <li>Open the app in a modern web browser (Chrome, Firefox, Edge, etc.).</li>
+                    <li>No installation required—works offline after initial load.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">2.2 Navigation</h3>
+                <p>The app has three main tabs:</p>
+                <ul class="feature-list">
+                    <li><strong>Asset Verification</strong> – Add/edit asset records</li>
+                    <li><strong>Data Sheet</strong> – View all assets in a table</li>
+                    <li><strong>Field Management</strong> – Customize form fields</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">check_circle</i>
+                3. Asset Verification
+            </h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">3.1 Adding a New Asset</h3>
+                <ul class="step-list">
+                    <li>Click <strong>"Add New Asset"</strong> (or select an existing one from the dropdown).</li>
+                    <li>Fill in the details:
+                        <ul class="feature-list">
+                            <li>Asset Number (required)</li>
+                            <li>Description, Quantity, Cost Center, etc.</li>
+                            <li>Condition (Good/Poor) – If "Poor," add notes.</li>
+                            <li>Date Inspected (auto-filled to today).</li>
+                        </ul>
+                    </li>
+                    <li>Upload a photo (drag & drop or click to browse).</li>
+                    <li>Click <strong>"Save Asset"</strong>.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">3.2 Editing an Asset</h3>
+                <ul class="step-list">
+                    <li>Select an asset from the dropdown.</li>
+                    <li>Modify any details.</li>
+                    <li>Click <strong>"Save Asset"</strong>.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">3.3 Resetting the Form</h3>
+                <ul class="step-list">
+                    <li>Click <strong>"Reset Form"</strong> to clear all fields.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">table_chart</i>
+                4. Data Sheet Management
+            </h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">4.1 Viewing All Assets</h3>
+                <ul class="step-list">
+                    <li>Switch to the <strong>"Data Sheet"</strong> tab to see a table of all assets.</li>
+                    <li>Use the <strong>"View"</strong>, <strong>"Edit"</strong>, and <strong>"Delete"</strong> buttons for each asset.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">4.2 Exporting Data to Excel</h3>
+                <ul class="step-list">
+                    <li>Click <strong>"Download Data"</strong>.</li>
+                    <li>An Excel file (Asset_Verification_YYYYMMDD_HHMM.xlsx) will download.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">4.3 Importing Data from Excel</h3>
+                <ul class="step-list">
+                    <li>Click <strong>"Upload Data"</strong>.</li>
+                    <li>Select an Excel file (.xlsx or .csv).</li>
+                    <li>The app will import and update the asset list.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">4.4 Clearing All Data</h3>
+                <ul class="step-list>
+                    <li>Click <strong>"Clear Data"</strong>.</li>
+                    <li>Confirm in the pop-up.</li>
+                </ul>
+                <div class="warning">
+                    <strong>Warning:</strong> This cannot be undone!
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">backup</i>
+                5. Backup & Restore
+            </h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">5.1 Creating a Backup</h3>
+                <ul class="step-list">
+                    <li>Click <strong>"Create Backup"</strong>.</li>
+                    <li>A .json file will download (Asset_Verification_Backup_YYYYMMDD_HHMM.json).</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">5.2 Restoring from Backup</h3>
+                <ul class="step-list">
+                    <li>Click <strong>"Restore Backup"</strong>.</li>
+                    <li>Select a previously saved .json file.</li>
+                    <li>Confirm the restore in the pop-up.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">settings</i>
+                6. Field Management (Customization)
+            </h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">6.1 Adding a New Field</h3>
+                <ul class="step-list">
+                    <li>Go to the <strong>"Field Management"</strong> tab.</li>
+                    <li>Enter a <strong>Field Name</strong> and select a <strong>Field Type</strong> (Text, Number, Date, etc.).</li>
+                    <li>Click <strong>"Add Field"</strong>.</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">6.2 Editing/Deleting Fields</h3>
+                <ul class="step-list">
+                    <li>Click the pencil (✏️) to edit a field name.</li>
+                    <li>Click the trash (🗑️) to remove a field.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">help</i>
+                7. Troubleshooting
+            </h2>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Issue</th>
+                        <th>Solution</th>
+                    </tr>
+                    <tr>
+                        <td>Excel import fails</td>
+                        <td>Ensure the file matches the expected format.</td>
+                    </tr>
+                    <tr>
+                        <td>Backup restore fails</td>
+                        <td>Check if the file is corrupted.</td>
+                    </tr>
+                    <tr>
+                        <td>Photos not uploading</td>
+                        <td>Try a different image format (JPEG/PNG).</td>
+                    </tr>
+                    <tr>
+                        <td>App not loading</td>
+                        <td>Refresh the page or clear browser cache.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">check_circle_outline</i>
+                8. Conclusion
+            </h2>
+            <p>This app provides a complete solution for asset verification with:</p>
+            <ul class="feature-list">
+                <li>✔ Easy data entry</li>
+                <li>✔ Excel export/import</li>
+                <li>✔ Backup & restore</li>
+                <li>✔ Customizable fields</li>
+            </ul>
+            <p>For support, contact your system administrator.</p>
+            <p>Happy Asset Tracking! 🚀</p>
+        </div>
+
+        <div class="footer">
+            <p>Physical Asset Verification App - User Manual</p>
+        </div>
+    </div>
+</body>
+</html>
